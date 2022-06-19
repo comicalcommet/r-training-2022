@@ -156,13 +156,14 @@
 <ul>
 <li><a href="R_training_2022_2.html#2">データ解析の重要性について</a></li>
 <li><a href="R_training_2022_2.html#14">Rと接する上での心構え</a></li>
+<li><a href="R_training_2022_2.html#15">プログラミングの身につけ方</a></li>
 <li><a href="R_training_2022_2.html#16">この実習の取り組み方</a></li>
-<li><a href="R_training_2022_2.html#18">Rの使い方</a></li>
-<li><a href="R_training_2022_2.html#28">変数を扱おう</a></li>
-<li><a href="R_training_2022_2.html#35">データ型（class）を扱おう</a></li>
-<li><a href="R_training_2022_2.html#39">ベクトル（vector）を扱おう</a></li>
-<li><a href="R_training_2022_2.html#44">データフレーム（data.frame）を扱おう</a></li>
-<li><a href="R_training_2022_2.html#54">パッケージを使おう</a></li>
+<li><a href="R_training_2022_2.html#18">Rの使い方</a> -<a href="R_training_2022_2.html#26">覚えておくと役立つこと(1) スペース</a> -<a href="R_training_2022_2.html#27">覚えておくと役立つこと(2) ショートカット</a></li>
+<li><a href="R_training_2022_2.html#28">変数を扱おう</a> -<a href="R_training_2022_2.html#35">覚えておくと役立つこと(3) Rstudioの画面の見方</a></li>
+<li><a href="R_training_2022_2.html#36">データ型（class）を扱おう</a></li>
+<li><a href="R_training_2022_2.html#41">ベクトル（vector）を扱おう</a></li>
+<li><a href="R_training_2022_2.html#46">データフレーム（data.frame）を扱おう</a></li>
+<li><a href="R_training_2022_2.html#56">パッケージを使おう</a></li>
 </ul>
 </div>
 <div id="step-3データを可視化しよう" class="section level3">
@@ -215,44 +216,47 @@
 <ul>
 <li><a href="R_training_2022_4.html#16">filter(【列名】 %in% c(【値1】, 【値2】))</a> 複数の値</li>
 <li><a href="R_training_2022_4.html#17">filter(【列名】 &gt; 【値】)</a> 比較演算子</li>
-<li><a href="R_training_2022_4.html#22">filter(【列名A】 &gt; 【値】, 【列名B】 &gt; 【値】)</a> 複数条件（AND）</li>
-<li><a href="R_training_2022_4.html#22">filter(【列名A】 &gt; 【値】| 【列名B】 &gt; 【値】)</a> 複数条件（OR）</li>
+<li><a href="R_training_2022_4.html#23">filter(【列名A】 &gt; 【値】, 【列名B】 &gt; 【値】)</a> 複数条件（AND）</li>
+<li><a href="R_training_2022_4.html#25">filter(【列名A】 &gt; 【値】| 【列名B】 &gt; 【値】)</a> 複数条件（OR）</li>
 </ul></li>
-<li><a href="R_training_2022_4.html#32">mutate()</a> 新しい列を作る／既存の列の値を変更する
+<li><a href="R_training_2022_4.html#33">mutate()</a> 新しい列を作る／既存の列の値を変更する
 <ul>
-<li><a href="R_training_2022_4.html#34">mutate(if_else()), mutate(case_when)</a> 条件に応じた値</li>
+<li><a href="R_training_2022_4.html#36">mutate(if_else()), mutate(case_when)</a> 条件に応じた値</li>
 </ul></li>
-<li><a href="R_training_2022_4.html#37">summarize()</a> 数値を要約する
+<li><a href="R_training_2022_4.html#40">summarize()</a> 数値を要約する
 <ul>
-<li><a href="R_training_2022_4.html#39">group_by()</a> 特定のグループに分けて要約する</li>
-<li><a href="R_training_2022_4.html#42">across()</a> 複数条件の要約を短く書く</li>
+<li><a href="R_training_2022_4.html#42">group_by()</a> 特定のグループに分けて要約する</li>
+<li><a href="R_training_2022_4.html#45">across()</a> 複数条件の要約を短く書く</li>
 </ul></li>
-<li><a href="R_training_2022_4.html#50">bind_cols, bind_rows</a> 複数のデータフレームを結合する <br><br />
-</li>
+<li><a href="R_training_2022_4.html#50">bind_cols, bind_rows</a> 複数のデータフレームを結合する</li>
+<li><a href="R_training_2022_4.html#54">***_join</a> 複数のデータフレームを列で紐付けて結合する</li>
+</ul>
+<br>
+<ul>
 <li>その他便利な関数を探したい方は
 <ul>
 <li><a href="https://heavywatal.github.io/rstats/dplyr.html">Heavy Watalさんの解説</a></li>
-<li>など <br><br />
+<li><a href="https://github.com/rstudio/cheatsheets/blob/main/data-transformation.pdf">dplyr公式チートシート</a> <br><br />
 </li>
 </ul></li>
 </ul></li>
 <li>tidyrでデータを使える形に変形しよう
 <ul>
-<li><a href="R_training_2022_4.html#54">pivot_wider()</a> 縦長のデータを横広に</li>
-<li><a href="R_training_2022_4.html#55">pivot_longer()</a> 横広のデータを縦長に</li>
-<li><a href="R_training_2022_4.html#62">separate()</a> 文字列カラムを複数に分割</li>
-<li><a href="R_training_2022_4.html#64">unite()</a> 複数の文字列カラムを結合 <br><br />
+<li><a href="R_training_2022_4.html#60">pivot_wider()</a> 縦長のデータを横広に</li>
+<li><a href="R_training_2022_4.html#61">pivot_longer()</a> 横広のデータを縦長に</li>
+<li><a href="R_training_2022_4.html#68">separate()</a> 文字列カラムを複数に分割</li>
+<li><a href="R_training_2022_4.html#70">unite()</a> 複数の文字列カラムを結合 <br><br />
 </li>
 <li>その他便利な関数を探したい方は
 <ul>
 <li><a href="https://heavywatal.github.io/rstats/tidyr.html">Heavy Watalさんの解説</a></li>
-<li>など <br><br />
+<li><a href="https://github.com/rstudio/cheatsheets/blob/main/tidyr.pdf">tidyr公式チートシート</a> <br><br />
 </li>
 </ul></li>
 </ul></li>
 <li>ggplot2の実例
 <ul>
-<li><a href="R_training_2022_4.html#46">棒グラフ±エラーバー</a></li>
+<li><a href="R_training_2022_4.html#49">棒グラフ±エラーバー</a></li>
 </ul></li>
 </ul>
 </div>
